@@ -1,0 +1,19 @@
+/* Button Style */
+.button {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.card{
+    z-index: 0;
+}
+/* Change opacity on hover */
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Add underline on focus */
+.button:focus {
+    text-decoration: underline;
+}
+
