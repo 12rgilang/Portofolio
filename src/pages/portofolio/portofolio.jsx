@@ -2,9 +2,28 @@ import { useState } from "react";
 import "../portofolio/portofolio.css";
 import html from "./../supports/porto/html-css.png";
 import commerce from "./../supports/porto/e-commerce.png";
+import porto from "./../supports/porto/Responsive-porto.png"
+import Vcation from "./../supports/porto/vcation.png"
+import sertifikat from "./../supports/porto/Udemy-sertif.png"
 
 let Portofolio = () => {
   const [data, setData] = useState([
+    {
+      framework: "MERN (MySQL, Express, React-js, Node-js)",
+      site: "Vcation Property Renting Web APP",
+      url: "https://jcwd230203.purwadhikabootcamp.com/",
+      code: "https://github.com/12rgilang/JCWD230203.git",
+      image: Vcation,
+      description: "Property Renting Web APP, with mobile first approach using Tailwind CSS."
+    },
+    {
+      framework: "React-js",
+      site: "Responsive Portofolio",
+      url: "https://gilangporto.vercel.app/",
+      code: "https://github.com/12rgilang/Portofolio.git",
+      image: porto,
+      description: "Responsive portofolio using React-js and tailwind CSS"
+    },
     {
       framework: "HTML-CSS",
       site: "Simple CV",
@@ -26,21 +45,35 @@ let Portofolio = () => {
   ]);
 
   const [idxSelected, setIdxSelected] = useState(0);
+  const [idxSelectedSertif, setIdxSelectedSertif] = useState(0)
 
   let onChange = (idx) => {
     setIdxSelected(idx);
   };
 
-  // let onMapping = () => {
-  //   return data.map((value, index) => {
-  //     return <div onClick={() => onChange(index)}>{value.framework}</div>;
-  //   });
-  // };
+  let onChangeSertif = (idx) => {
+    setIdxSelectedSertif(idx)
+  }
+
+  const [sertif, setSertif] = useState([
+    {
+      site: "Udemy Certificate",
+      url: "https://drive.google.com/file/d/1tpMuREx8aBsLCi-V6eKy3MXd38gnuyjC/view?usp=sharing",
+      code: "https://drive.google.com/uc?export=download&id=1tpMuREx8aBsLCi-V6eKy3MXd38gnuyjC",
+      image: sertifikat,
+      description: "Certificate Completion from UDEMY For FULLSTACK WEB DEVELOPER"
+    },
+  ])
 
   return (
     <>
-      <div
-        className="card flex items-center justify-center mx-auto mt-5 mb-[185px] "
+      <div className="wrapper grid grid-cols-1 md:grid-cols-2">
+        <div className="left">
+          <div className="mt-10 flex justify-center items-center text-3xl font-bold mb-4 display-5 tittle" data-aos="zoom-in-right">
+           MY PROJECT
+          </div>
+        <div
+        className="card flex items-center justify-center mx-auto md:mt-[50px] md:mb-[100px] "
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"
       >
@@ -58,7 +91,7 @@ let Portofolio = () => {
               <h5 className="text-gray-900 text-xl font-medium mb-2">
                 {data[idxSelected].site}
               </h5>
-              <p className="text-gray-700 text-base mb-8 h-[100px]">
+              <p className="text-gray-700 text-base mb-12 md:mb-8 h-[100px]">
                 {data[idxSelected].description}
               </p>
               <div className="wrapper flex">
@@ -91,14 +124,13 @@ let Portofolio = () => {
             </div>
           </div>
         </div>
-
         {/* Button */}
-        <div className="inline-flex flex-col " role="toolbar">
+        <div className="inline-flex flex-col" role="toolbar">
           {data.map((value, index) => {
             return (
               <button
                 type="button"
-                className="button rounded-full inline-block px-6 py-2.5 my-2 mx-2 my-bg-salmon my-dark my-fs-15  transition duration-150 ease-in-out"
+                className="button rounded-full inline-block px-6 py-2.5 my-2 mx-2 my-light my-fs-15 transition duration-150 ease-in-out"
                 key={index}
                 onClick={() => onChange(index)}
               >
@@ -106,6 +138,74 @@ let Portofolio = () => {
               </button>
             );
           })}
+        </div>
+      </div>
+        </div>
+
+
+        {/* Right */}
+        <div className="right">
+          <p className="flex justify-center items-center mt-10 text-3xl font-bold mb-4 display-5  tittle" data-aos="zoom-in-right">CERTIFICATE
+          </p>
+          <div
+        className="card flex items-center justify-center mx-auto md:mt-[50px] md:mb-[100px] "
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
+        {/* Card */}
+        <div className="flex justify-center my-5 sm:my-0">
+          <div className="rounded-lg shadow-lg my-bg-light max-w-sm">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img
+                className="rounded-t-lg"
+                src={sertif[idxSelectedSertif].image}
+                alt="My porto"
+              />
+            </a>
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">
+                {sertif[idxSelectedSertif].site}
+              </h5>
+              <p className="text-gray-700 text-base mb-12 md:mb-8 h-[100px]">
+                {sertif[idxSelectedSertif].description}
+              </p>
+              <div className="wrapper flex">
+                <button
+                  type="button"
+                  className=" inline-block px-6 py-2.5 my-bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg 0focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mr-2"
+                >
+                  <a href={sertif[idxSelectedSertif].url}>See Full Certificate </a>
+                </button>
+
+                <button 
+                type="button"
+                className="px-6 py-2.5 my-bg-ligh font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg 0focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  <a href={sertif[idxSelectedSertif].code} className="btn my-main">
+                    Download My Certificate
+                  </a>
+                  <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="download"> <g> <path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path> <g> <polyline data-name="Right" fill="none" id="Right-2" points="7.9 12.3 12 16.3 16.1 12.3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" x1="12" x2="12" y1="2.7" y2="14.2"></line> </g> </g> </g> </g> </g></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Button */}
+        <div className="inline-flex flex-col" role="toolbar">
+          {sertif.map((value, index) => {
+            return (
+              <button
+                type="button"
+                className="button rounded-full inline-block px-6 py-2.5 my-2 mx-2 my-light my-fs-15 transition duration-150 ease-in-out"
+                key={index}
+                onClick={() => onChangeSertif(index)}
+              >
+                {index + 1}
+              </button>
+            );
+          })}
+        </div>
+      </div>
         </div>
       </div>
     </>

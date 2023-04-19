@@ -2,6 +2,14 @@
 .button {
     padding: 10px 20px;
     text-decoration: none;
+    background-color: #043846;
+    background-image: linear-gradient(315deg, #043846 0%, #e2ac52 33%, #303841 66%, #ec756f 100%);
+}
+
+.tittle {
+    background: linear-gradient(270deg, #ec756f, #e2ac52);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .card{

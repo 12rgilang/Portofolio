@@ -86,7 +86,7 @@ let Home = () => {
         </div>
       </div>
 
-      <div className="email mx-[100px] mt-[400px] mb-[300px] md:mb-[50px] md:my-[70px] md:flex items-center h-screen ">
+      <div className="email mx-[50px] mt-[400px] mb-[100px] md:mb-[50px] md:my-[70px] md:flex items-center h-screen ">
         <div className="left basis-1/2"
         data-aos="fade-down">
           <div className="text-5xl font-bold text-center md:text-left md:pl-[50px] lwt leading-relaxed mb-5 w-fit ">Let's work Together</div>

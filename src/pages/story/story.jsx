@@ -43,7 +43,7 @@ function Story() {
             <div className="flex flex-wrap items-center md:">
               <div className="grow-0 shrink-0 basis-auto w-full mt-2 lg:w-6/12 xl:w-8/12">
                 <div className="px-6 py-12 md:px-12" >
-                  <h2 className="text-3xl font-bold mb-4 text-blue-600 display-5 aboutme-experience"
+                  <h2 className="text-3xl font-bold mb-4 display-5 aboutme-experience"
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom">
                     <p>As an aircraft technician, my responsibilities included:</p> 
@@ -59,7 +59,7 @@ function Story() {
                     </button>
                   </h2>
                   <div className="collapse" id="experience">
-                    <div className="block p-6 rounded-lg shadow-lg bg-white ">
+                    <div className="block p-6 rounded-lg shadow-lg bg-white text-justify">
                       <p className="my-dark mb-1 ">
                         - Maintaining and repairing the electrical and mechanical
                         systems on aircraft.
@@ -170,7 +170,7 @@ function Story() {
                     </button>
                   </h2>
                   <div className="collapse" id="bootcamp">
-                  <div className="block p-6 rounded-lg shadow-lg bg-white ">
+                  <div className="block p-6 rounded-lg shadow-lg bg-white text-justify">
                     <p className="my-dark mb-1 "> 
                       - JavaScript Fundamental | variable and datatypes | conditional and loop statements|array and function|OOP|Data Structures| basic Algorithm
                     </p>

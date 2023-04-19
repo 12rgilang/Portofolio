@@ -45,15 +45,6 @@ let Navbar = () => {
               </a>
             </div>
           </div>
-          {/* <div
-            className="middle my-dark flex basis-1/2 justify-center items-center"
-            data-aos="zoom-out-down"
-          >
-            <div className="text hidden sm:flex sm:justify-center sm:basis-1/2 sm:text-xl"></div>
-            <div className="flex flex-nowrap my-bg-salmon sm:hidden">GILANG RAMADHAN</div>
-          </div> */}
-
-          {/* link */}
           <div
             className="right flex items-center justify-end cursor-pointer basis-1/2 pr-2 lg:flex"
             data-aos="fade-zoom-in"
@@ -73,68 +64,6 @@ let Navbar = () => {
               </ul>
               </div>
             </div>
-
-              {/* dropdown */}
-              {/* <div className="relative">
-                <button
-                  className="flex my-bg-secondary items-center px-3 py-2 rounded my-dark sm:hidden"
-                  onClick={toggleMenu} // Add an event handler to toggle the value of "isOpen"
-                >
-                  <svg
-                    className="h-8 w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button> */}
-              {/* <div
-                  className={`absolute top-0 right-0 left-auto flex group-focus:block group-focus:opacity-100 transition-opacity duration-150 ease-in-out mt-8 ${
-                    isOpen ? "block" : "hidden"
-                  }`}
-                >
-                  <div className="relative w-full my-bg-secondary flex ">
-                    <div className="flex py-2 px-4 font-semibold my-dark">
-                      <div className="my-bg-secondary mr-3 px-4 py-2 ">
-                        {Links.map((value) => {
-                          return (
-                            <div
-                              key={value.name}
-                              className="hover:opacity-75 focus:opacity-75"
-                            >
-                              <a href={value.link}>{value.name}</a>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    className="absolute top-0 right-0 pt-4 mr-4 my-dark"
-                    onClick={toggleMenu} // Add an event handler to toggle the value of "isOpen"
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div> */}
-              {/* </div> */}
             
             <div className="dropdown">
             <button
@@ -185,12 +114,6 @@ let Navbar = () => {
                   );
                 })}
               </h5>
-              <button
-                type="button"
-                className="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
             </div>
