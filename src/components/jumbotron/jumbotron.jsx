@@ -15,7 +15,7 @@ function Jumbotron(){
                 data-aos-offset="0">
                     <div className='font-semibold flex justify-start items-center my-5'>Innovative | Adaptive </div>
                     <div className='text-5xl font-bold text-left leading-relaxed'>Meet Your New Favorite Web Dev.</div>
-                    <div className='flex justify-start items-center'>This design Sliced from Figma</div>
+                    <div className='flex justify-start items-center'>Gilang Ramadhan</div>
                 </div>
             </div>
             <div className="right basis-1/2 sm:flex"

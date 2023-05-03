@@ -5,22 +5,24 @@ import commerce from "./../supports/porto/e-commerce.png";
 import porto from "./../supports/porto/Responsive-porto.png"
 import Vcation from "./../supports/porto/vcation.png"
 import sertifikat from "./../supports/porto/Udemy-sertif.png"
-import ifrit from "./../supports/porto/Ifrit.png"
+import ifrit from "./../supports/porto/Ifrit.JPEG"
 import groceries from "./../supports/porto/Groceries.png"
 
 let Portofolio = () => {
   const [data, setData] = useState([
     {
-      framework: "MERN (MySQL, Express, React-js, Node-js)",
+      framework: "React-Js, Tailwind CSS, Tailwind Elements",
+      server: "Node-Js, Express-Js, Sequelize-Js, MySql",
       role: "Fullstack",
       site: "Vcation Property Renting Web APP",
       url: "https://jcwd230203.purwadhikabootcamp.com/",
       code: "https://github.com/12rgilang/JCWD230203.git",
       image: Vcation,
-      description: "An online tool known as an e-commerce application that allows customers to compare hotel costs according to specific dates. Prices for each type of lodging will vary and depend on a number of variables, including national holidays, holidays that coincide with collective leave, and specific dates that are explicitly selected."
+      description: "E-commerce application that allows customers to compare hotel costs according to specific dates. Prices for each type of lodging will vary and depend on a number of variables, including national holidays, holidays that coincide with collective leave, and specific dates that are explicitly selected."
     },
     {
-      framework: "MERN (MySQL, Express, React-js, Node-js)",
+      framework: "React-Js, Tailwind CSS, Headless UI, Flowbite",
+      server: "Node-Js, Express-Js, Sequelize-Js, MySql",
       role: "Fullstack",
       site: "Multi-Warehouse E-Commerce",
       url: "https://jcwd230201.purwadhikabootcamp.com/",
@@ -29,7 +31,8 @@ let Portofolio = () => {
       description: "Multiple Storage E-commerce is an e-commerce application that uses several warehouses to store items. This is being used in order to decrease transportation costs while also speeding up delivery. The system will immediately transmit any new orders from the user's address to the closest warehouse when they come in. Order processing is the responsibility of the admin on duty at that location until it is finished. The amount the user will pay for shipping will depend on how far the chosen warehouse is from their address."
     },
     {
-      framework: "MERN (MySQL, Express, React-js, Node-js)",
+      framework: "React-Js, Tailwind CSS, Flowbite",
+      server: "Node-Js, Express-Js, Sequelize-Js, MySql",
       role: "Fullstack",
       site: "Groceries E-Commerce",
       url: "https://jcwd230202.purwadhikabootcamp.com/",
@@ -37,35 +40,17 @@ let Portofolio = () => {
       image: groceries,
       description: "an online shopping tool that allows the user to pick the store's location. The retail establishment has a number of outlying branches. Each store sells the same item; businesses in other places are branches. Users and admins, who serve as shop managers, are two different categories of users in this program. The ability to modify discount features and apply them throughout the item purchase process is one of this online store's benefits."
     },
-    {
-      framework: "React-js",
-      role: "Front-End",
-      site: "Responsive Portofolio",
-      url: "https://gilangporto.vercel.app/",
-      code: "https://github.com/12rgilang/Portofolio.git",
-      image: porto,
-      description: "Responsive portofolio using React-js and tailwind CSS"
-    },
-    {
-      framework: "HTML-CSS",
-      role: "Front-End",
-      site: "Simple CV",
-      url: "https://gilangramadhan.netlify.app/",
-      code: "https://github.com/12rgilang/Portofolio_HTML-CSS.git",
-      image: html,
-      description:
-        "Making a simple CV using HTML and CSS, not responsive and containing my short story",
-    },
-    {
-      framework: "React-Js",
-      role: "Fullstack",
-      site: "e-commerce",
-      url: "https://gilang-e-commerce.netlify.app",
-      code: "https://github.com/12rgilang/porto-e-commerce-fe.git",
-      image: commerce,
-      description:
-        "Making a copy of starbucks e-commerce using a ReactJs and JSONserver typicode for a sample database. *ps Due to limited resources i have, its not fully working, fully working web is on my localhost.",
-    },
+    // {
+    //   framework: "React-Js, Tailwind CSS",
+    //   server: "Json Server",
+    //   role: "Fullstack",
+    //   site: "E-commerce",
+    //   url: "https://gilang-e-commerce.netlify.app",
+    //   code: "https://github.com/12rgilang/porto-e-commerce-fe.git",
+    //   image: commerce,
+    //   description:
+    //     "Making a copy of starbucks e-commerce using a ReactJs and JSONserver typicode for a sample database. *ps Due to limited resources i have, its not fully working, fully working web is on my localhost.",
+    // },
   ]);
 
   const [idxSelected, setIdxSelected] = useState(0);
@@ -104,7 +89,7 @@ let Portofolio = () => {
         {/* Card */}
         <div className="flex justify-center my-5 sm:my-0">
           <div className="rounded-lg shadow-lg my-bg-light max-w-sm">
-            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <a href={data[idxSelected].url} data-mdb-ripple="true" data-mdb-ripple-color="light">
               <img
                 className="rounded-t-lg"
                 src={data[idxSelected].image}
@@ -115,18 +100,26 @@ let Portofolio = () => {
               <h5 className="text-gray-900 text-xl font-medium mb-2">
                 {data[idxSelected].site}
               </h5>
-              <p className="text-gray-700 text-base text-justify mb-56 h-[100px]">
+              <p className="text-gray-700 text-base mb-2 md:mb-2 flex">
+               Role: <p className="tittle pl-2">{data[idxSelected].role}</p>
+              </p>
+              <p className="text-gray-700 text-base text-justify mb-80 md:mb-56 h-[100px]">
                 {data[idxSelected].description}
               </p>
-              <p className="text-gray-700 text-base mb-2 md:mb-2">
-               Role: {data[idxSelected].role}
+              <p className="text-gray-700 text-base mb-2 md:mb-2 flex ">
+               <p className="whitespace-nowrap w-3/12">Front-End :</p> 
+               <p className="tittle pl-5 md:pl-2 w-9/12">{data[idxSelected].framework}</p>
+              </p>
+              <p className="text-gray-700 text-base mb-2 md:mb-2 flex ">
+               <p className="whitespace-nowrap w-3/12">Back-End :</p> 
+               <p className="tittle pl-5 md:pl-2 w-9/12">{data[idxSelected].server}</p>
               </p>
               <div className="wrapper flex">
                 <button
                   type="button"
                   className=" inline-block px-6 py-2.5 my-bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg 0focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out mr-2"
                 >
-                  <a href={data[idxSelected].url}>Visit the web Here </a>
+                  <a href={data[idxSelected].url} >Visit the web Here </a>
                 </button>
 
                 <button 
@@ -182,7 +175,7 @@ let Portofolio = () => {
         {/* Card */}
         <div className="flex justify-center my-5 sm:my-0">
           <div className="rounded-lg shadow-lg my-bg-light max-w-sm">
-            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <a href={sertif[idxSelectedSertif].url} data-mdb-ripple="true" data-mdb-ripple-color="light">
               <img
                 className="rounded-t-lg"
                 src={sertif[idxSelectedSertif].image}

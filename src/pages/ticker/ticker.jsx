@@ -4,7 +4,7 @@ import './ticker.css'
 function Ticker(){
     return(
         <>
-        <div className="word flex ticker-container items-center h-24 w-[300px] mt-[100px] md:w-[800px] ">
+        <div className="word flex ticker-container items-center h-24 w-[300px] mt-[100px] md:w-[1300px] ">
             <div className="ticker flex text-5xl items-center lg:text-7xl  ">
                 <div className="sql px-5 flex ">
                     MYSQL

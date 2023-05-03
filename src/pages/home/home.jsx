@@ -63,19 +63,21 @@ let Home = () => {
                           alt="Gilang Avatar"
                         />
                       </div>
-                      <div className="md:ml-6">
-                        <p className="text-gray-500 font-light mb-6">
-                          "Web development skills can fuel business growth and
-                          entrepreneurship. Harness the power of technology to
-                          drive success and create new opportunities in the
-                          world of business and beyond."
+                      <div className="md:ml-6 ">
+                        <p className="text-gray-500 text-justify font-light mb-6">
+                        Strong web development skills are essential in today's digital landscape. As businesses increasingly rely on technology, my proficiency in web development can help expand opportunities and drive success. Please review my resume to see how my qualifications can benefit your organization.
                         </p>
+                        <div className="md:flex items-center ml-5">
                         <p className="font-semibold text-xl mb-2 text-gray-800">
                           Gilang Ramadhan
                         </p>
-                        <p className="font-semibold text-gray-500 mb-0">
-                          Full-Stack Web Developer
-                        </p>
+                        <button className="resume font-semibold mb-0 px-3 py-2 rounded-lg shadow-lg hover:bg-slate-700 ">
+                         <a href="https://drive.google.com/file/d/1giPy4-VEP1SCWUQqVyKmjcX6LxLtdecv/view?usp=sharing">
+                         Check my Resume
+                         </a> 
+                        </button>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>

@@ -16,6 +16,12 @@ body {
   bottom: 0;
 }
 
+.resume {
+  background: linear-gradient(270deg, #ec756f, #e2ac52);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes wave-animation {
   0% {
     transform: translateX(0);
