@@ -72,7 +72,7 @@ let Home = () => {
                           Gilang Ramadhan
                         </p>
                         <button className="resume font-semibold mb-0 px-3 py-2 rounded-lg shadow-lg hover:bg-slate-700 ">
-                         <a href="https://drive.google.com/file/d/1giPy4-VEP1SCWUQqVyKmjcX6LxLtdecv/view?usp=sharing">
+                         <a href="https://drive.google.com/file/d/1mjRbo1h2FuysFGmdssFAo0yYaMZfjoeC/view?usp=share_link">
                          Check my Resume
                          </a> 
                         </button>
